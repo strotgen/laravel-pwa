@@ -1,7 +1,7 @@
 # PWA Easy Setup for Laravel (With Vue.js and React.js)
 
 <center>
-    <img width="956" alt="Screenshot 2024-10-04 at 10 34 23 PM" src="https://github.com/user-attachments/assets/2b187de0-d5cc-4871-9c5d-ce0ffbb5a26c">
+    <img width="956" alt="Screenshot 2024-10-04 at 10 34 23 PM" src="https://github.com/user-attachments/assets/2b187de0-d5cc-4871-9c5d-ce0ffbb5a26c">
 </center>
 <div align="center">
 
@@ -17,9 +17,14 @@ Laravel PWA is a package designed to seamlessly integrate Progressive Web Applic
 
 - Automatically generate PWA manifest and service worker
 - Configurable installation button
-- Supports Laravel 8, 9, 10, and 11
+- Supports Laravel 8, 9, 10, 11, and 12
 - Easy setup and usage
 - Compatible with mobile and desktop devices
+
+## Requirements 📋
+
+- PHP 8.2+
+- Laravel 8, 9, 10, 11, or 12
 
 ## Important ⚠️
 
@@ -115,15 +120,15 @@ These directives will automatically generate the necessary tags and JavaScript f
 
 ## Screenshots 📸
 
-<img width="1470" alt="Screenshot 2024-09-19 at 10 11 01 PM" src="https://github.com/user-attachments/assets/27c08862-0557-4fbd-bd8f-90b9d05f67b3">
+<img width="1470" alt="Screenshot 2024-09-19 at 10 11 01 PM" src="https://github.com/user-attachments/assets/27c08862-0557-4fbd-bd8f-90b9d05f67b3">
 
 ### Installing PWA App
 
-<img width="1470" alt="Screenshot 2024-09-19 at 10 13 23 PM" src="https://github.com/user-attachments/assets/5e58a596-3267-42d9-98d5-c48b0f54d3ed">
+<img width="1470" alt="Screenshot 2024-09-19 at 10 13 23 PM" src="https://github.com/user-attachments/assets/5e58a596-3267-42d9-98d5-c48b0f54d3ed">
 
 ### Offline Page
 
-<img width="1470" alt="Screenshot 2024-09-19 at 10 13 52 PM" src="https://github.com/user-attachments/assets/1a80465e-0307-43ac-a1bc-9bca2cf16f8d">
+<img width="1470" alt="Screenshot 2024-09-19 at 10 13 52 PM" src="https://github.com/user-attachments/assets/1a80465e-0307-43ac-a1bc-9bca2cf16f8d">
 
 ## Contribution 🧑‍💻
 
@@ -149,10 +154,10 @@ If you encounter any issues, please check if the issue already exists in the **I
 
 ### Submit a Pull Request
 
-When you're ready to contribute, open a pull request describing the changes you’ve made and how they improve the project. Please ensure:
+When you're ready to contribute, open a pull request describing the changes you've made and how they improve the project. Please ensure:
 - All commits are squashed into one clean commit.
 - The code follows **PSR-12** standards.
-- You’ve tested the changes locally.
+- You've tested the changes locally.
 
 ### Coding Standards
 
@@ -162,12 +167,12 @@ When you're ready to contribute, open a pull request describing the changes you�
 
 ## Example Workflow 🌟
 
-Here’s a simple example of how to use this package:
+Here's a simple example of how to use this package:
 
 1. Install the package via Composer.
 2. Publish the configuration files.
-3. Add the `@PwaHead` directive in your layout file’s `<head>`.
+3. Add the `@PwaHead` directive in your layout file's `<head>`.
 4. Add the `@RegisterServiceWorkerScript` directive before the closing `</body>` tag.
-5. Customize the `config/pwa.php` to fit your project’s needs.
+5. Customize the `config/pwa.php` to fit your project's needs.
 6. Run `php artisan erag:pwa-update-manifest` to update the manifest file.
 7. That's it! Your Laravel app is now PWA-enabled. 🚀

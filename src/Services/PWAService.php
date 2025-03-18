@@ -4,7 +4,12 @@ namespace EragLaravelPwa\Services;
 
 class PWAService
 {
-    public function HeadTag(): string
+    /**
+     * Generate the PWA head tags.
+     * 
+     * @return string
+     */
+    public function headTag(): string
     {
         $manifest = asset('/manifest.json');
         $themeColor = config('pwa.manifest.theme_color', '#6777ef');
@@ -23,7 +28,12 @@ class PWAService
         HTML;
     }
 
-    public function RegisterServiceWorkerScript(): string
+    /**
+     * Generate the service worker registration script.
+     * 
+     * @return string
+     */
+    public function registerServiceWorkerScript(): string
     {
         $swPath = asset('/sw.js');
         $isDebug = config('pwa.debug', false);
@@ -58,6 +68,11 @@ class PWAService
         HTML;
     }
 
+    /**
+     * Get the JavaScript for the install button.
+     * 
+     * @return string
+     */
     private static function installButtonJs(): string
     {
         return <<<'HTML'
@@ -65,6 +80,12 @@ class PWAService
         HTML;
     }
 
+    /**
+     * Get the CSS for the install button.
+     * 
+     * @param bool $installButton
+     * @return string
+     */
     private static function getInstallButtonStyle(bool $installButton): string
     {
         if ($installButton) {
@@ -78,6 +99,13 @@ class PWAService
         return '';
     }
 
+    /**
+     * Get the HTML for the install app button.
+     * 
+     * @param bool $installButton
+     * @param string $icon
+     * @return string
+     */
     private static function getInstallAppHtml(bool $installButton, string $icon): string
     {
         if ($installButton) {
